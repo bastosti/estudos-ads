@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preencha o formulário</title>
+</head>
+<body>
+
+    <h1>Pedido de Pizza</h1>
+    <!-- GET: os dados são enviados como parâmetros na URL | POST: os dados são enviados no corpo da requisição -->
+    <!--required torna obrigatória a entrada-->
+    <form action="teste.jsp" method="get">
+        Nome: <input type="text" name="nome" required>
+        <br>
+        <br>
+        E-mail: <input type="email" name="email" required>
+        <br>
+        Tamanho:
+        <!-- radio com mesmo name: permite selecionar uma única opção do grupo -->
+        <!-- checked: deixa uma opção pré-selecionada -->
+        <input type="radio" name="tamanho" value="g" checked required> Tamanho Grande
+        <input type="radio" name="tamanho" value="m"> Tamanho Médio
+        <input type="radio" name="tamanho" value="p"> Tamanho Pequeno
+        <br>
+        Sabor:
+        <!-- value: valor que será enviado ao servidor | texto: conteúdo apresentado ao usuário -->
+        <select name="sabor" required>
+            <option value="calabresa">Calabresa</option>
+            <option value="frango">Frango</option>
+            <option value="frampalha">Frampalha</option>
+            <option value="portuguesa">Portuguesa</option>
+        </select>
+        <br>
+        Adicionais:
+        <input type="checkbox" name="borda" value="sim"> Borda 
+        <input type="checkbox" name="cebola" value="sim"> Cebola
+        <input type="checkbox" name="azeitona" value="sim"> Azeitona 
+        <br>
+        Data de Entrega: <input type="date" name="dataEntrega" required>
+        <br>
+        Observações de Entrega: <textarea name="observacoesEntrega" rows="10" cols="30"></textarea>
+        <br>
+        <input type="submit" value="Enviar Pedido">
+        
+    </form>
+</body>
+</html>
