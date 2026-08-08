@@ -1,0 +1,241 @@
+<!--
+========================
+LEGENDA HTML - AULA 04
+========================
+
+TABELAS
+table    = tabela.
+caption  = título ou descrição da tabela.
+tr       = table row, linha da tabela.
+th       = table header, célula de cabeçalho.
+td       = table data, célula de dados.
+colspan  = faz uma célula ocupar várias colunas.
+
+LISTAS
+ol       = ordered list, lista ordenada.
+ul       = unordered list, lista não ordenada.
+li       = list item, item da lista.
+
+LINKS
+a        = anchor, elemento utilizado para criar links.
+href     = endereço ou destino do link.
+
+IMAGENS
+img      = imagem.
+src      = caminho/endereço da imagem.
+alt      = texto alternativo da imagem.
+
+TEXTO
+h1-h6    = títulos hierárquicos.
+p        = parágrafo.
+br       = quebra de linha.
+
+ENTIDADES
+&nbsp;   = espaço não separável.
+
+Observação:
+HTML define estrutura e significado.
+CSS é utilizado para apresentação visual e espaçamento.
+-->
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 04 - Tabelas</title>
+</head>
+<body>
+    <h1>AULA 04 - TABELAS</h1>
+
+    <h2>EXERCÍCIO 1 - Tabela de duas colunas e três linhas, uma delas para título</h2>
+        
+    <!--a adoção de border seguiu a instrução da aula, 
+    embora a apresentação visual seja, em regra, responsabilidade do CSS
+    -->
+
+    <table border="1">
+        
+    <!--
+    caption identifica o título ou a descrição da tabela.
+
+    tr vem de table row e representa uma linha da tabela.
+    th vem de table header e representa uma célula de cabeçalho.
+    td vem de table data e representa uma célula de dados.
+    -->
+        <caption>Economia Mensal</caption>
+        
+        <tr>
+            <th>Mês</th>
+            <th>Valor</th>
+        </tr>
+        <tr>
+            <td>Janeiro</td>
+            <td>R$ 100,00</td>
+        </tr>
+        <tr>
+            <td>Fevereiro</td>
+            <td>R$ 200,00</td>
+        </tr>
+    </table>
+    
+    <!--
+    br é quebra de linha, não espaçamento entre elementos. 
+    Espaçamento é idealmente tratado em css
+    -->
+    <br>
+    <br>
+    <br>
+
+    <h2>EXERCÍCIO 2 - Tabela de três linhas, primeira cheia, segunda e terceira divididas</h2>
+    <table border="1">
+        <tr>
+        
+        <!--
+        1 colspan determina que a célula ocupe várias colunas,
+        na prática, forçou espaço da célula e criou uma largura artificial
+        2 Neste exercício, colspan foi combinado com &nbsp; para reproduzir
+        a largura visual demonstrada em aula.
+        3 &nbsp; = non-breaking space, espaço não separável, 
+        Representa um espaço que não permite quebra de linha naquele ponto.
+        Foi usado em aula para criar largura visual. 
+            
+        4 A estrutura poderia ser construída de forma mais clara definindo,
+        por exemplo, 6 colunas e utilizando colspan="6", colspan="3"
+        e colspan="2" conforme a distribuição desejada.
+        -->
+        <td colspan="30">
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+        </td>
+        </tr>
+        <tr>
+            <td colspan="15">
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+            </td>
+            <td colspan="15">
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+            </td>
+        </tr>
+        <tr>
+            <td colspan="10">
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+            </td>
+            <td colspan="10">
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+            </td>
+            <td colspan="10">
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+            </td>
+        </tr>
+    </table>
+
+
+<h2>EXERCÍCIO 3 - Tabela de imagens com links</h2>
+
+<!--
+1. a hierarquia básica de uma tabela é:
+table
+ ├── tr
+ │    ├── th
+ │    └── th
+ │
+ └── tr
+      ├── td
+      └── td
+
+ou, leia-se, também:
+
+      table → tr → th/td
+
+
+2. links absolutos válidos são algo como "https://..." no caso, utilizei link fictício 
+
+3. para acessibilidade é importante que a estrutura contenha o elemento alt, assim:
+<img src="" alt="Gatinho para adoção">
+img = image.
+Insere uma imagem na página.
+O atributo src informa o caminho da imagem.
+O atributo alt fornece um texto alternativo para acessibilidade
+e para situações em que a imagem não pode ser exibida.
+
+img
+├── src → onde está a imagem
+└── alt → descrição alternativa
+
+4.1 a = anchor: elemento que cria hiperlink para página, arquivo, seção ou endereço
+4.2 href: define o destino do hiperlink
+-->
+<table>
+    <tr>
+        <th>Adote Gatinhos</th>
+        <th>Adote Doguinhos</th>
+    </tr>
+    <tr>
+        <td>
+            <a href="linkdositedeadocao.com/gatinhos">
+                <img src="imagemdegatinho.jpeg">
+            </a>
+        </td>
+        <td>
+            <a href="linkdositedeadocao.com/doguinhos">
+                <img src="imagemdedoguinho.jpeg">
+            </a>
+        </td>
+    </tr>
+</table>
+<br>
+<br>
+<br>
+
+<h2>EXERCÍCIO 4 - Site com imagem, título, descrição, segundo título, lista de três itens com dois subitens cada
+    e links de redes sociais ao final</h2>
+    <img src="imagem.png" height="100">
+
+    <!--
+    Por deliberação, utilizei h3 para "SOBRE", pois h1 já foi utilizado
+    como título principal da aula e h2 como título dos exercícios.
+
+    h1 a h6 = títulos de diferentes níveis hierárquicos.
+    h1 representa o nível principal.
+    h2 representa uma subseção de h1.
+    h3 representa uma subseção de h2.
+
+    "O número do h não é escolhido pelo tamanho visual do título. 
+    Ele representa a hierarquia semântica do conteúdo."
+    -->
+
+    <h3>SOBRE</h3>
+    <!--
+    p = paragraph.
+    Representa um parágrafo de texto.
+    -->
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Temporibus, harum corrupti. Itaque quos, sit id suscipit delectus excepturi iure corrupti nihil aliquam quisquam, recusandae ab labore laboriosam, sequi architecto ea?</p>
+    <h4>JOGOS</h4>
+    <!--
+    1 ol = ordered list: lista ordenada, numerada 
+    2 ul = unordered list, lista não ordenada, não numerada mas, em geral, com marcadores 
+    3 li = list item, representa item dentro de uma lista
+    -->
+    <ul>
+        <li>Nintendo Wii
+            <ul>
+                <li>Mario Bros</li>
+                <li>Mario Bros II</li>
+            </ul>
+        </li>
+        <li>Super Nintendo
+            <ul>
+                <li>Super Mario</li>
+                <li>Mario Kart</li>
+            </ul>
+        </li>
+        <li>Gameboy
+            <ul>
+                <li>Pokémon Red</li>
+                <li>Pokémon Yellow</li>
+            </ul>
+        </li>
+    </ul>
+    <a href="site1">Twitter</a> | <a href="site1">Facebook</a> | <a href="site1">WhatsApp</a>
+</body>
+</html>
