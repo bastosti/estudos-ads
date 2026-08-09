@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- 
+    h1 e p são seletores
+    css também pode trabalhar com classes e identificações (class e id)
+    a especificação leva precedência:
+     da classe sobre o seletor
+     de id sobre classe e seletor
+
+
+    -->
+    <style>
+        h1{color:blue; font-size: 30px;}
+        p{background-color:antiquewhite;}
+
+        .subtitulo{font-size:20px;}
+        #segundo_subtitulo{font-size:16px; color:crimson;}
+
+        .minhalista li{color:darkmagenta}
+    </style>
+</head>
+<body>
+    
+    <h1>Título da página</h1>
+
+    <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium ab iure obcaecati eos nulla laboriosam beatae porro sed explicabo molestias placeat ea minima cupiditate autem libero dolores, et vel aut.
+    </p>
+    <h2 class="subtitulo">Meu subtítulo</h2>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur quo fugiat facilis reprehenderit ad totam recusandae, vero iste blanditiis nulla labore eligendi est tempore architecto? Eius esse obcaecati recusandae animi?
+    </p>
+    <h2 class="subtitulo" id="segundo_subtitulo">Meu segundo subtítulo</h2>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur quo fugiat facilis reprehenderit ad totam recusandae, vero iste blanditiis nulla labore eligendi est tempore architecto? Eius esse obcaecati recusandae animi?
+    </p>
+
+    <h2>Subtítulo</h2>
+    <ul class="minhalista">
+        <li>item 1 da lista</li>
+        <li>item 2 da lista</li>
+    </ul>
+</body>
+</html>
